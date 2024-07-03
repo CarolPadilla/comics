@@ -16,7 +16,7 @@ python manage.py startapp comics ------> creo la carpeta de otra cosa
 
 python manage.py runserver
 
--------Comandos a considerar--------------
+-------Comandos a considerar----------------------
 
 python manage.py migrate
 
