@@ -11,8 +11,8 @@ def nosotros(request):
 def productos(request):
     return render(request, 'productos.html')
 
-def registro(request):
-    return render(request, 'registro.html')
+def autenticacion(request):
+    return render(request, 'autenticacion.html')
 
 def iniciar(request):
     return render(request, 'iniciar.html')
