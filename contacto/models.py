@@ -4,8 +4,6 @@ from django.db import models
 
 from django.contrib.auth import get_user_model
 
-from tienda.models import Producto
-
 from django.db.models import F, Sum , FloatField
 # Create your models here.
 
@@ -35,7 +33,6 @@ class Pedido(models.Model):
     
 class LineaPedido(models.Model):
     user=models.ForeignKey(User, on_delete=models.CASCADE)
-    producto=models.ForeignKey(Producto, on_delete=models.CASCADE)
     pedido=models.ForeignKey(Pedido, on_delete=models.CASCADE)
     cantidad=models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
