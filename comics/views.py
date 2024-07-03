@@ -14,8 +14,8 @@ def productos(request):
 def autenticacion(request):
     return render(request, 'autenticacion.html')
 
-def iniciar(request):
-    return render(request, 'iniciar.html')
+def logear(request):
+    return render(request, 'logear.html')
 
 def carrito(request):
     return render(request, 'carrito.html')
