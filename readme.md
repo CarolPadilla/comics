@@ -20,6 +20,10 @@ python manage.py runserver
 
 python manage.py migrate
 
+
+python manage.py makemigrations CarritoApp 
+  python manage.py showmigrations
+
 python manage.py createsuperuser -------> creacion de super usuarios 
 PD:
 
