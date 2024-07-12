@@ -36,3 +36,6 @@ def onepiece(request):
 
 def superman(request):
     return render(request, 'superman.html')
+
+def Clima(request):
+    return render(request, 'Clima.html')

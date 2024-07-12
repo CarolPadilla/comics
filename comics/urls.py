@@ -13,6 +13,7 @@ urlpatterns = [  path('', views.index, name='index'),
                  path('naruto', views.naruto, name='naruto'),
                  path('onepiece', views.onepiece, name='onepiece'),
                  path('superman', views.superman, name='superman'),
+                 path('Clima', views.Clima, name='Clima'),
                  ]
 
 
