@@ -24,6 +24,9 @@ def carrito(request):
 def personaje(request):
     return render(request, 'personaje.html')
 
+def apivalores(request):
+    return render(request, 'apivalores.html')
+
 #comic
 
 def joker(request):
