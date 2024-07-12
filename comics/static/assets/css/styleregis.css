@@ -1,0 +1,107 @@
+:root {
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+        'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+        'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-mono);
+    background: linear-gradient(to right, #003366, #cc0000);    background-size: cover;
+    background-position: center;
+}
+
+#inic{
+    color: black;
+}
+
+.container {
+
+    margin-top: 50px; /* Ajusta según tu diseño */
+    padding: 20px;
+    border-radius: 10px; /* Estilo de borde redondeado */
+    
+    
+}
+
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+form {
+    max-width: 500px;
+    margin: auto; /* Centrado horizontal del formulario */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255); /* Borde blanco */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+   
+}
+
+
+
+
+label { 
+    color: rgb(5, 4, 4); /* Texto de etiquetas en blanco */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #eee;
+    outline-color: #003DFF; /* Color del contorno al enfocar */
+}
+
+input[type='submit'] {
+    margin-top: 20px;
+    background-color: #003DFF;
+    color: #fff;
+    font-family: var(--font-mono);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+input[type='submit']:hover {
+    background-color: #002f9f; /* Cambio de color al pasar el ratón */
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+p a {
+    text-decoration: none;
+    color: #003DFF;
+}
+
+
+/* Estilos generales */
+.btn {
+    padding: 10px 20px; /* Ajusta el padding según tus necesidades */
+    font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
+
+}
+
+/* Aplicas la clase para centrar el botón */

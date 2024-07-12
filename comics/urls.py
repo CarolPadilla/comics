@@ -7,14 +7,13 @@ urlpatterns = [  path('', views.index, name='index'),
                  path('autenticacion', views.autenticacion, name='autenticacion'),
                  path('logear', views.logear, name='logear'),
                  path('carrito', views.carrito, name='carrito'),
-                 path('personajes', views.personajes, name='personajes'),
 
                  path('joker', views.joker, name='joker'),
                  path('naruto', views.naruto, name='naruto'),
                  path('onepiece', views.onepiece, name='onepiece'),
                  path('superman', views.superman, name='superman'),
                  path('Clima', views.Clima, name='Clima'),
-                 path('marvel', views.marvel, name='marvel'),
+                 path('personaje', views.personaje, name='personaje'),
                  ]
 
 

@@ -20,11 +20,9 @@ def logear(request):
 def carrito(request):
     return render(request, 'carrito.html')
 
-def personajes(request):
-    return render(request, 'personajes.html')
 
-def marvel(request):
-    return render(request, 'marvel.html')
+def personaje(request):
+    return render(request, 'personaje.html')
 
 #comic
 
