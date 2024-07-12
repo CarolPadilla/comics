@@ -23,6 +23,9 @@ def carrito(request):
 def personajes(request):
     return render(request, 'personajes.html')
 
+def marvel(request):
+    return render(request, 'marvel.html')
+
 #comic
 
 def joker(request):
