@@ -13,7 +13,6 @@ urlpatterns = [  path('', views.index, name='index'),
                  path('onepiece', views.onepiece, name='onepiece'),
                  path('superman', views.superman, name='superman'),
                  path('Clima', views.Clima, name='Clima'),
-                 path('personaje', views.personaje, name='personaje'),
                  path('apivalores', views.apivalores, name='apivalores'),
                  ]
 

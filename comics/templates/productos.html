@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
@@ -19,17 +20,6 @@
 <body>
   
     {%block Content%}
-    <header>
-    <nav>
-      <div>
-        <a href="{% url 'index' %}">Inicio</a>
-        <a href="{% url 'nosotros' %}">Nosotros</a>
-        <a href="{% url 'personaje' %}">Personajes</a>
-        <a href="{% url 'productos' %}">Productos</a>
-        <div class="register-button">
-        </div>
-    </nav>
-  </header>
   <main>
     <section id="productos-container">
     </section>

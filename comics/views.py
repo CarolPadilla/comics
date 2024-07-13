@@ -20,10 +20,6 @@ def logear(request):
 def carrito(request):
     return render(request, 'carrito.html')
 
-
-def personaje(request):
-    return render(request, 'personaje.html')
-
 def apivalores(request):
     return render(request, 'apivalores.html')
 

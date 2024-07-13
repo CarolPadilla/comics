@@ -3,7 +3,9 @@
 {% load static %}
 
 {% load crispy_forms_tags %}
-
+<head>
+    <link rel="stylesheet" href="{% static 'assets/css/styleregis.css' %}">
+ </head>
 {% block content %}
     <div class="container bg-dark mt-5 pt-3 pb-3 rounded mb-5">
         <div class="row">
@@ -19,6 +21,8 @@
                     {{form|crispy}}
 
                     <button type="submit" class="btn btn-success pl-5 pr-5 mt-4">Login</button>
+
+                    <p> no tienes cuenta?<a  id="inic" href="{% url 'autenticacion' %}"> registrarse</a></p>
                 </form>
             </div>                            
         </div><!--Fin div row-->
