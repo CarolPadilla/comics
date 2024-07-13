@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\GorillaSetups\Documents\GitHub\comics\myenv
+set VIRTUAL_ENV=C:\Users\ProBookR7\Documents\GitHub\comics\myenv
 
 if not defined PROMPT set PROMPT=$P$G
 
