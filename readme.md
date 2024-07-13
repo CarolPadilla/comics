@@ -1,35 +1,31 @@
-Instalación Entorno Virtual Django
+Pasos para poder ingresar al proyecto
 
-py -m venv myenv  -----> creo el entorno Virtual
+1.-  py -m venv myenv  -----> Crea un entorno virtual llamado myenv en el directorio actual. Un entorno virtual es un entorno aislado donde puedes instalar paquetes y dependencias de Python sin afectar el sistema global de Python ni otros proyectos.
 
-.\myenv\Scripts\activate   ---------> ejecuto el entorno Virtual
+2.- .\myenv\Scripts\activate ----> Se usa para activar el entorno virtual en Windows.
 
-pip install django  ----> instalo Django
+3.- pip install django  ----> En resumen, este comando descarga e instala la última versión de Django desde el índice de paquetes de Python (PyPI) en tu entorno actual.
 
-python.exe -m pip install --upgrade pip  ------->Hago un upgrade
+4.- python.exe -m pip install ----> Este comando se asegura de que estás utilizando la versión más reciente de pip, lo cual es importante para mantener compatibilidad con los paquetes y obtener las últimas características y correcciones de errores.
 
-django-admin startproject tienda . -------> creo carpetas con py necesarios
+5.- django-admin startproject tienda . ----> Este comando crea un nuevo proyecto Django llamado "tienda" en el directorio actual, configurando todos los archivos y directorios necesarios para empezar a desarrollar tu aplicación web con Django.
 
-ls -----> veo carpetas
+6.- python manage.py startapp comics ----> Este comando crea una nueva aplicación llamada "comics" dentro de tu proyecto Django actual.
 
-python manage.py startapp comics ------> creo la carpeta de otra cosa
+7.- python manage.py runserver ----> Se utiliza para iniciar el servidor de desarrollo de Django. 
 
-python manage.py runserver
+8.- py -m pip install --upgrade pip ----> Se utiliza para actualizar pip, el gestor de paquetes de Python, a la última versión disponible.
 
--------Comandos a considerar----------------------
+9.- pip install python-decouple ----> Se utiliza para instalar la biblioteca python-decouple en tu entorno de Python. 
 
-python manage.py migrate
+10.- pip install django-crispy-forms ----> Se utiliza para instalar la biblioteca django-crispy-forms en tu entorno de Python.
 
+11.- pip install crispy-bootstrap4 ----> Se utiliza para instalar el paquete crispy-bootstrap4, que es un complemento para django-crispy-forms.
 
-python manage.py makemigrations CarritoApp 
-  python manage.py showmigrations
+12.- pip install Pillow ----> Se utiliza para instalar la biblioteca Pillow en tu entorno de Python.
 
-python manage.py createsuperuser -------> creacion de super usuarios 
-PD:
+---- Super usuario ----
 
+python manage.py createsuperuser -------> Creacion de superusuarios 
 
-py -m pip install --upgrade pip
-pip install python-decouple
-pip install django-crispy-forms
-pip install crispy-bootstrap4
-pip install Pillow
+--> Usuario de prueba creado: carol, Contraseña: 123456
