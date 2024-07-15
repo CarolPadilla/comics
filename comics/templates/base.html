@@ -28,8 +28,19 @@
         <a href="{% url 'Tienda' %}">Tienda</a>
         <a href="{% url 'Clima' %}">Clima</a>
         <a href="{% url 'apivalores' %}">Dolar</a>
+
+        {% if user.is_authenticated %}
+          {% if user.is_superuser %}
+                        <a href="{% url 'vendedor' %}">Vender</a>
+          {% endif %}
+
+      
+        
         <div class="register-button">
+         <a href="{% url 'close_session' %}"> </i> Hola {{user.username}} &nbsp;&nbsp;<br> Cerrar sesión</a>
+          {% else %}
           <a href="{% url 'autenticacion' %}">Regístrate</a>
+        {% endif %}
         </div>
           <!--<a href="{% url 'carrito' %}"><img src="{% static 'assets/img/carrito.png' %}" alt="carrito"><span id="cuenta-carrito">0</span></a>
             -->

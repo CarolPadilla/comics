@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir</title>
+    <link rel="stylesheet" href="{% static 'assets/css/vendedor.css' %}">
+
+</head>
+
+<body>
+    <script>
+
+function editarProducto(id, nombre, categoria, precio, imagen) {
+    document.getElementById('producto_id').value = id;
+    document.getElementById('nombre').value = nombre;
+    document.getElementById('categoria').value = categoria;
+    document.getElementById('precio').value = precio;
+    document.getElementById('imagen').value = imagen;
+    document.getElementById('agregar').style.display = 'none';
+    document.getElementById('editar').style.display = 'block';
+}
+
+function resetFormulario() {
+    document.getElementById('producto_id').value = '';
+    document.getElementById('nombre').value = '';
+    document.getElementById('categoria').value = '';
+    document.getElementById('precio').value = '';
+    document.getElementById('imagen').value = '';
+    document.getElementById('agregar').style.display = 'block';
+    document.getElementById('editar').style.display = 'none';
+}
+
+    </script>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <h1> Hola estimad@ {{user.username}},&nbsp;&nbsp;espero tengas un buen dia </h1>
+
+         <p>Al terminar regresa: <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Menu</a></p>
+
+
+<body>
+    <h1>Agregar/Editar Producto</h1>
+    <form method="post" action="{% url 'gestionar_productos' %}">
+        {% csrf_token %}
+        <input type="hidden" id="producto_id" name="producto_id">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="64" required><br>
+
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" maxlength="32" required><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required><br>
+
+        <label for="imagen">URL de la Imagen:</label>
+        <input type="url" id="imagen" name="imagen"><br>
+
+        <button type="submit" id="agregar" name="agregar">Agregar Producto</button>
+        <button type="submit" id="editar" name="editar" style="display:none;">Editar Producto</button>
+    </form>
+    <button onclick="resetFormulario()">Resetear Formulario</button>
+
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                {{ producto.nombre }} - {{ producto.precio }}
+                <form method="post" action="{% url 'gestionar_productos' %}" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="producto_id" value="{{ producto.id }}">
+                    <button type="submit" name="eliminar">Eliminar</button>
+                </form>
+                <button onclick="editarProducto('{{ producto.id }}', '{{ producto.nombre }}', '{{ producto.categoria }}', '{{ producto.precio }}', '{{ producto.imagen }}')">Editar</button>
+            </li>
+        {% endfor %}
+    </ul>
+    
+
+        {% else %}
+         <h1>Bienvenido, {{ user.username }}&nbsp;&nbsp; </h1>
+            <h2>Ooops..!! ¿ que haces aqui?</h2>
+            <p>mejor debrias  ir al: <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Menu</a></p>
+        {% endif %}
+        {% else %}
+        <h2>Ooops..!! ¿ que haces aqui?</h2>
+        <p>regresa al: <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Menu</a></p>
+    {% endif %}
+    
+
+</body>
+</html>
