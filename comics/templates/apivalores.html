@@ -1,7 +1,6 @@
-
 {% load static %}
 
-{% block content%}
+{% block content %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,36 +13,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--<link rel="stylesheet" href="{% static 'assets/css/index.css' %}"> -->
-    <link rel="stylesheet" href="{% static 'assets/css/apivalor.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/apivalores.css' %}">
 </head>
 
-
-   
-
+<body>
+    <div class="header">
+        <h1>Valores Financieros</h1>
+    </div>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Valores Financieros</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card text-center shadow-lg mb-4">
-                    <div class="card-body">
-                        <i class="fas fa-dollar-sign fa-3x mb-3 text-primary"></i>
-                        <h5 class="card-title">Dólar</h5>
-                        <p class="card-text">Valor actual: <span id="dolar" class="fw-bold">Cargando...</span></p>
-                        <button class="btn btn-primary" onclick="actualizarDolar()">Actualizar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card text-center shadow-lg mb-4">
-                    <div class="card-body">
-                        <i class="fas fa-money-bill-wave fa-3x mb-3 text-success"></i>
-                        <h5 class="card-title">UF</h5>
-                        <p class="card-text">Valor actual: <span id="uf" class="fw-bold">Cargando...</span></p>
-                        <button class="btn btn-success" onclick="actualizarUF()">Actualizar</button>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="cards-container">
+            <!-- Cards se generarán dinámicamente aquí -->
         </div>
     </div>
 
@@ -51,9 +30,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+4lnt/smI4lZT+LbDVCSTou3lE4D2" crossorigin="anonymous">
     </script>
     <script src="{% static 'assets/js/apivalor.js' %}"></script>
+</body>
 
+</html>
 {% endblock %}
-
-
-
-
