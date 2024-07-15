@@ -1,53 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
+}  
 
-body {
+
+body{
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra verticalmente */
-    min-height: 100vh; /* vh en lugar de hv */
-    background: linear-gradient(to right, #003366, #cc0000);
+    align-content: center;
+    min-height: 100hv;
+    background:linear-gradient(to right, #003366, #cc0000); ;
     background-size: cover;
     background-position: center;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
+.container{
     position: relative;
     width: 400px;
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    height: 100px;
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 16px;
+    border-radius:16px ;
     padding: 20px;
     color: #fff;
     transition: height .6s ease;
 }
 
-.search-box {
+.search-box{
     position: relative;
-    width: 100%;
-    height: 55px;
+    width:100%;
+    height: 55px; 
     display: flex;
     align-items: center;
+
 }
 
-.search-box i {
+.search-box i{
     position: absolute;
     left: 10px;
     font-size: 28px;
 }
 
-.search-box input {
+.search-box input{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -60,8 +59,8 @@ body {
     text-transform: uppercase;
     padding: 0 48px 0 42px;
 }
+.search-box input::placeholder{
 
-.search-box input::placeholder {
     color: #fff;
     text-align: capitalize;
 }
@@ -69,7 +68,7 @@ body {
 .search-box button {
     position: absolute;
     right: 0;
-    width: 0;
+    width:0;
     height: 100%;
     background: transparent;
     border: none;
@@ -78,75 +77,80 @@ body {
     color: #fff;
     padding: 0 40px 0 5px;
     cursor: pointer;
+    
 }
 
+/*imagenes clima*/
 .weather-box {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 40px 0;
 }
-
 .weather-box,
 .weather-details,
-.not-found {
+.not-found{
     overflow: hidden;
     visibility: hidden;
 }
 
 .weather-box.activate,
 .weather-details.activate,
-.not-found.activate {
+.not-found.activate{
     visibility: visible;
 }
 
 .weather-box .box,
-.not-found .box {
+.not-found .box{
     transform: translateY(-100%);
 }
 
 .weather-box.activate .box,
-.not-found.activate .box {
-    transform: translateY(0%);
+.not-found.activate .box{
+    transform: translateY(-0%);
     transition: transform 1s ease;
     transition-delay: .6s;
 }
 
-.weather-box.activate .box.info-weather {
-    transform: translate(-120%);
+.weather-box.activate .box.info-weather{
+    transform:translate(-120%) ;
+
 }
 
 .container.activate .weather-box .box.info-weather,
 .container.activate .weather-details .humidity .info-humidity,
-.container.activate .weather-details .wind .info-humidity {
+.container.activate  .weather-details .wind .info-humidity{
+
     transform: translateY(-120%);
     transition: transform 1s ease;
 }
 
-.weather-box img {
+.weather-box img{
     width: 60%;
+
 }
 
-.weather-box .temperatura {
+.weather-box .temperatura{
     position: relative;
     font-size: 64px;
     line-height: 1;
     font-weight: 700;
 }
 
-.weather-box .temperatura span {
+.weather-box .temperatura span{
     position: absolute;
     font-size: 24px;
     margin-left: 4px;
 }
-
-.weather-box .descripcion {
+.weather-box .descripcion{
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
+
+
 }
 
-.weather-details {
+.weather-details{
     position: absolute;
-    bottom: 40px;
+    bottom: 40px; 
     left: 0;
     width: 100%;
     padding: 0 20px;
@@ -158,14 +162,14 @@ body {
     display: flex;
     align-items: center;
     width: 50%;
-    transform: translateY(-100%);
+    transform: translateYT(-100%);
 }
 
 .weather-details.activate .humidity .humidity,
 .weather-details.activate .wind {
-    transform: translateY(0%);
+    transform: translateYT(0%);
     transition: transform 1s ease;
-    transition-delay: 1.2s;
+    transition-delay: 1.2s ;
 }
 
 .weather-details.activate .humidity.info-humidity,
@@ -173,34 +177,36 @@ body {
     transform: translateY(-100%);
     overflow: hidden;
 }
-
-.weather-details .humidity {
+.weather-details .humidity{
     padding-left: 20px;
     justify-content: flex-start;
-}
 
+}
 .weather-details .wind {
-    padding-right: 20px;
+    padding-right: 20;
     justify-content: flex-end;
+
 }
 
 .weather-details i {
     font-size: 56px;
     margin-right: 10px;
-}
 
-.weather-details span {
+}
+.weather-details span{
     display: inline-block;
     font-size: 22px;
     font-weight: 500;
+
 }
 
 .weather-details p {
     font-size: 14px;
     font-weight: 500;
+
 }
 
-.not-found {
+.not-found{
     position: absolute;
     top: 0;
     left: 0;
@@ -210,7 +216,7 @@ body {
 }
 
 .not-found img {
-    width: 65%;
+    width:65% ;
 }
 
 .not-found p {
@@ -219,6 +225,6 @@ body {
     margin-top: 12px;
 }
 
-.city-hide {
-    display: none;
+.city-hide{
+    display:none;
 }
